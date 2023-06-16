@@ -9,3 +9,10 @@ val Pink80 = Color(0xFFEFB8C8)
 val Purple40 = Color(0xFF6650a4)
 val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
+
+val Green_Light = Color(0xFF8CD790)
+val Green_Dark = Color(0xFF77AF9C)
+val Teal = Color(0xFF03DAC5)
+val Teal_Dark = Color(0XFF018786)
+val Sepia = Color(0xFFFFF9EB)
+val White = Color.White
