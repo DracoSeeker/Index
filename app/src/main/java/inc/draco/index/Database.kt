@@ -1,8 +1,11 @@
 package inc.draco.index
 
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import io.realm.kotlin.Realm
 import io.realm.kotlin.RealmConfiguration
 import io.realm.kotlin.ext.query
+import io.realm.kotlin.query.RealmResults
 
 class Database {
     var realm: Realm
@@ -46,6 +49,17 @@ class Database {
     }
 
     fun results() = realm.query<Person>().find()
+
+    fun add(update: () -> Unit) {
+        realm.writeBlocking {
+            this.copyToRealm(
+                Person().apply {
+                    name = "Kayso"
+                }
+            )
+        }
+        update()
+    }
 
     fun close() {
         realm.close()
